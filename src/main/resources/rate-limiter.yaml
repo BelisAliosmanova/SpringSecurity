@@ -1,0 +1,11 @@
+resilience4j:
+  rate-limiter:
+    instances:
+      general_api_rate_limiter:
+        limitForPeriod: 100  # requests
+        limitRefreshPeriod: 30m # refresh period
+        timeoutDuration: 0    # no timeout
+      sensitive_operations_rate_limiter:
+        limitForPeriod: 10
+        limitRefreshPeriod: 1m
+        timeoutDuration: 0
